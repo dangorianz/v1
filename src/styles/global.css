@@ -4,74 +4,123 @@
 
 @layer base {
     :root {
-        --main-bg-color: rgb(15, 23, 42);
-        --primary-text-color: #5C8374;
-        --secondary-text-color: #1B4242;
-        --ligth-text-color: #9EC8B9;
+      --main-bg-color: #111827;
+      --primary-text-color: #5C8374;
+      --secondary-text-color: #1B4242;
+      --ligth-text-color: #9EC8B9;
     }
 }
 
 html{
-    background-color: var( --main-bg-color);
-
+  background-color: var( --main-bg-color);
 }
 
 .shadow-hover:hover{
-    -webkit-box-shadow: 5px 5px 0px 0px var(--ligth-text-color);
-    -moz-box-shadow: 5px 5px 0px 0px var(--ligth-text-color);
-    box-shadow: 5px 5px 0px 0px var(--ligth-text-color);
+  -webkit-box-shadow: 5px 5px 0px 0px var(--ligth-text-color);
+  -moz-box-shadow: 5px 5px 0px 0px var(--ligth-text-color);
+  box-shadow: 5px 5px 0px 0px var(--ligth-text-color);
 }
 
 .text-light{
-    color: var(--ligth-text-color)
+  color: var(--ligth-text-color)  
 }
 
 .fade-in-info {
-    -webkit-animation-duration: 2s;
-    animation-duration: 2s;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-  
-    -webkit-animation-name: fadeInInfo;
-    animation-name: fadeInInfo;
-  }
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
 
+  -webkit-animation-name: fadeInInfo;
+  animation-name: fadeInInfo;
+}
+
+.fade-in-email {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+
+  -webkit-animation-name: fadeInEmail;
+  animation-name: fadeInEmail;
+}
+
+.email::before{
+  content: "";
+  display: block;
+  width: 1px;
+  height: 90px;
+  margin: 0px auto;
+  background-color: #5eead4;
+}
 .social::after{
-    content: "";
-    display: block;
-    width: 1px;
-    height: 90px;
-    margin: 0px auto;
-    background-color: #5eead4;
-    
-  }
+  content: "";
+  display: block;
+  width: 1px;
+  height: 90px;
+  margin: 0px auto;
+  background-color: #5eead4;
+}
 
-  .fade-in {
-    -webkit-animation-duration: 2s;
-    animation-duration: 2s;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
+.fade-in {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
+.underline-animate {
+  display: inline-block;
+  position: relative;
+}
+
+.underline-animate::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #cbd5e1;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.underline-animate:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
   
-    -webkit-animation-name: fadeIn;
-    animation-name: fadeIn;
-  }
-  
-  @keyframes fadeIn {
-    0% {opacity: 0; transform: translateX(-100px)}
-    100% {opacity: 1; transform: translateX(0)}
-  } 
-  
-  @-webkit-keyframes fadeIn {
-    0% {opacity: 0; transform: translateX(-100px)}
-    100% {opacity: 1; transform: translateX(0)}
-  }
-  
-  @keyframes fadeInInfo {
-    0% {opacity: 0; transform: translateY(100px)}
-    100% {opacity: 1; transform: translateY(0)}
-  } 
-  
-  @-webkit-keyframes fadeInInfo {
-    0% {opacity: 0; transform: translateY(100px)}
-    100% {opacity: 1; transform: translateY(0)}
-  }
+@keyframes fadeIn {
+  0% {opacity: 0; transform: translateX(-100px)}
+  100% {opacity: 1; transform: translateX(0)}
+} 
+
+@-webkit-keyframes fadeIn {
+  0% {opacity: 0; transform: translateX(-100px)}
+  100% {opacity: 1; transform: translateX(0)}
+}
+
+@keyframes fadeInInfo {
+  0% {opacity: 0; transform: translateY(100px)}
+  100% {opacity: 1; transform: translateY(0)}
+} 
+
+@-webkit-keyframes fadeInInfo {
+  0% {opacity: 0; transform: translateY(100px)}
+  100% {opacity: 1; transform: translateY(0)}
+}
+
+@keyframes fadeInEmail {
+  0% {opacity: 0; transform: translateY(-100px)}
+  100% {opacity: 1; transform: translateY(0)}
+} 
+
+@-webkit-keyframes fadeInEmail {
+  0% {opacity: 0; transform: translateY(-100px)}
+  100% {opacity: 1; transform: translateY(0)}
+}

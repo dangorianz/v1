@@ -15,6 +15,11 @@ html{
   background-color: var( --main-bg-color);
 }
 
+.bg-diff{
+  filter: brightness(1.1);
+  mix-blend-mode: multiply;
+}
+
 .shadow-hover:hover{
   -webkit-box-shadow: 5px 5px 0px 0px var(--ligth-text-color);
   -moz-box-shadow: 5px 5px 0px 0px var(--ligth-text-color);
@@ -123,4 +128,31 @@ html{
 @-webkit-keyframes fadeInEmail {
   0% {opacity: 0; transform: translateY(-100px)}
   100% {opacity: 1; transform: translateY(0)}
+}
+
+
+#letter-container {
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+}
+
+.letter {
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  font-size: 5px;
+  color: #1B4242; /* Letras blancas */
+  animation: move 10s linear infinite;
+}
+
+@keyframes move {
+  from {
+      transform: translate(0, 0);
+  }
+  to {
+      transform: translate(100vw, 100vh);
+  }
 }

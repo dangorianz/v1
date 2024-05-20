@@ -9,7 +9,7 @@ export const BouncingIcon = ({ IconComponent, initialLeft, initialTop }) => {
           await next({ x: Math.random() * window.innerWidth, y: Math.random() * window.innerHeight });
         }
       },
-      config: { bounce: true, tension: 4 },
+      config: { tension: 1, frequency: 10 },
     }));
   return (
         <animated.div style={{ position: 'fixed', ...styles }}>

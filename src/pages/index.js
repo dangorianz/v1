@@ -53,7 +53,7 @@ const IndexPage = () => {
   };
 
   useEffect(() => {
-    // renderIcons()
+    renderIcons()
   }, [])
   
   return (

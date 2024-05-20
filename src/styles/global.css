@@ -140,12 +140,14 @@ html{
 }
 
 .letter {
-  left: 0px;
-  top: 0px;
-  position: absolute;
-  font-size: 5px;
-  color: #1B4242; /* Letras blancas */
-  animation: move 10s linear infinite;
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  pointer-events: none;
+  color: #1b424260;
 }
 
 @keyframes move {

@@ -53,7 +53,7 @@ const IndexPage = () => {
   };
 
   useEffect(() => {
-    renderIcons()
+    // renderIcons()
   }, [])
   
   return (
@@ -63,7 +63,7 @@ const IndexPage = () => {
       <Mail/>
       <NavBar />
       {/* <div className="text-white min-h-screen lg:px-40 xl:px-72 lg:flex justify-between items-center"> */}
-      <div className="text-white min-h-screen pt-40 items-center px-5 sm:py-0 sm:px-32 md:40">
+      <div className="text-white min-h-screen pt-40 sm:pt-0 sm:flex items-center px-5 sm:px-32 md:40">
           <div className="flex flex-col justify-center items-center sm:items-start pb-20">
             <p className='text-teal-300 animate__animated animate__fadeInDown animate__slow'><Logo/></p>
             <p className="mt-5 text-5xl xl:text-6xl font-bold text-slate-300 animate__animated animate__fadeInDown animate__slow"><span className="text-teal-300">D</span>aniel <span className="text-teal-300">G</span>orianz</p>
@@ -75,7 +75,9 @@ const IndexPage = () => {
                 </div>
             </Link>
           </div>
-          <StaticImage src="../images/dalle2.webp" alt="logo 2" class="hidden md:block w-[650px] animate__animated " />
+          <div className="hidden md:block">
+            <StaticImage src="../images/dalle2.webp" alt="logo 2" class="hidden md:block md:w-[650px] animate__animated " />
+          </div>
       </div>
     </main>
   )

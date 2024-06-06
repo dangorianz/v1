@@ -1,0 +1,28 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.logo-container {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  perspective: 1000px;
+}
+
+.logo, .logo-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: spin 2s infinite linear;
+  transform-style: preserve-3d;
+} 
+
+ @keyframes spin {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+} 

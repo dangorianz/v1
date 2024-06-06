@@ -1,17 +1,19 @@
-import React from 'react';
+import { OrbitControls } from '@react-three/drei';
+import { Canvas } from '@react-three/fiber';
+import React  from 'react';
+import { Coin } from './Coin';
 
 export const Logo = () => {
+
+    
     return (
-      <div className="px-5 py-4 bg-transparent w-full z-10">
-          <svg width="70" height="70" viewBox="0 0 100 115" className="cursor-pointer absolute z-10 -translate-x-1 -translate-y-1 transition-all duration-300">
-              <polygon points="50,5 95,30 95,80 50,105 5,80 5,30" fill="#0f172a" stroke="#64ffda" strokeWidth="7" />
-              <text x="50%" y="50%" textAnchor="middle" fill="#64ffda" fontSize="45" fontFamily="Arial" dy=".3em">DG</text>
-          </svg>
-          <svg width="70" height="70" viewBox="0 0 100 115">
-              <polygon points="50,5 95,30 95,80 50,105 5,80 5,30" fill="#64ffda" stroke="#64ffda" strokeWidth="7" />
-          </svg>
-      </div>
-  
+        <Canvas style={{ height: '150px', width: '150px', }}>
+            <ambientLight intensity={1} />
+            <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
+            <pointLight position={[-10, -10, -10]} />
+            <Coin />
+            <OrbitControls enableZoom={false}/>
+        </Canvas>  
     )
-  }
+}
   

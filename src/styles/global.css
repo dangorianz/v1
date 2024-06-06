@@ -13,6 +13,8 @@
 
 html{
   background-color: var( --main-bg-color);
+  background-image: url('../images/gradient2.svg');
+  background-position: right;
   user-select: none;
 }
 

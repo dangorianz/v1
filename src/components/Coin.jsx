@@ -11,13 +11,22 @@ export const Coin = () => {
   });
 
   return (
-    <mesh ref={coinRef} rotation={[Math.PI / 2, 0, 0]} scale={[2.9, 2.9, 2.9]}>
-      <cylinderGeometry args={[1, 1, 0.1, 32]} />
-      <meshStandardMaterial color="#64ffda"  />
+    <group ref={coinRef} rotation={[Math.PI / 2, 0, 0]} scale={[2.8, 2.8, 2.8]}>
+      <mesh >
+        <cylinderGeometry args={[1, 1, 0.1, 32]} />
+        <meshStandardMaterial color="#212F4D" />
+      </mesh>
+
+      <mesh rotation={[Math.PI / 2, 0, 0]}>
+        <torusGeometry args={[1, 0.06, 16, 100]} />
+        <meshBasicMaterial color="#64ffda" />
+      </mesh>
+
+      
       <Text
         position={[0, 0.06, -0.08]}
         rotation={[-Math.PI / 2, 0, 0]}
-        fontSize={0.5}
+        fontSize={0.8}
         fontWeight={600}
         color="white"
         anchorX="center"
@@ -26,17 +35,17 @@ export const Coin = () => {
         DG
       </Text>
       <Text
-       position={[0, -0.06, -0.08]}
-       rotation={[Math.PI / 2, 0, Math.PI]}
-       fontSize={0.1}
-       fontWeight={600}
-       color="white"
-       anchorX="center"
-       anchorY="middle"
+        position={[0, -0.06, -0.08]}
+        rotation={[Math.PI / 2, 0, Math.PI]}
+        fontSize={0.5}
+        fontWeight={600}
+        color="white"
+        anchorX="center"
+        anchorY="middle"
       >
-        Full Stack
-        Developer
+        Dev
       </Text>
-    </mesh>
+    </group>
+
   );
 }

@@ -6,7 +6,6 @@ import { EffectComposer, Bloom } from '@react-three/postprocessing';
 
 export const Logo = () => {
 
-    
     return (
         <Canvas style={{ height: '150px', width: '150px', }}>
             <ambientLight intensity={1} />

@@ -160,3 +160,32 @@ html{
       transform: translate(100vw, 100vh);
   }
 }
+
+@media screen and (max-width: 1900px){
+  html{
+    background-position: 90% 50%;
+    background-repeat: no-repeat;
+  }
+}
+
+@media screen and (max-width: 1200px){
+  html{
+    background-position: 80% 50%;
+    background-repeat: no-repeat;
+  }
+}
+
+
+@media screen and (max-width: 1000px){
+  html{
+    background-position: 80% 50%;
+    background-repeat: no-repeat;
+  }
+}
+
+@media screen and (max-width: 700px){
+  html{
+    background-position: 75% 50%;
+    background-repeat: no-repeat;
+  }
+}

@@ -21,7 +21,7 @@ const IndexPage = () => {
             <p className="mt-10 text-center max-w-[500px] animate__animated animate__fadeInDown animate__slow description-animation">I’m a software engineer specializing in building (and occasionally designing) exceptional digital experiences. Currently, I’m focused on building accessible, human-centered products at Upstatement.</p>
             <Link className="w-fit animate__animated animate__fadeInDown animate__slow description-animation" to='https://drive.google.com/file/d/1RNVOjaeZqsgsP0m6jCvx5R9LqmTw5WRp/view?usp=sharing' target='_blank'>
                 <div className='border-teal-300 bg-[#111827] text-teal-300 mt-10 rounded border-2 px-5 py-2 transition-all duration-300 shadow-hover hover:-translate-x-1 hover:-translate-y-1'>
-                  Resume
+                  Check Resume
                 </div>
             </Link>
           </div>

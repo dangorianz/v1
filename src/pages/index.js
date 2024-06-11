@@ -1,7 +1,7 @@
 import * as React from "react"
 import 'animate.css'
 
-import { Experience, Logo, Mail, NavBar, SocialNetwork } from "../components"
+import { Experience, Logo, Mail, NavBar, SocialNetwork, Technologies } from "../components"
 
 const IndexPage = () => {
 
@@ -24,6 +24,7 @@ const IndexPage = () => {
           </div>
       </div>
       <Experience />
+      <Technologies/>
     </main>
   )
 }

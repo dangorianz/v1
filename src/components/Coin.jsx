@@ -1,13 +1,16 @@
 import React, { useRef } from 'react';
-import { useFrame } from '@react-three/fiber';
+import { useFrame, useLoader } from '@react-three/fiber';
 import { Text } from '@react-three/drei';
+import myImage from '../images/danFoto2.png'
+import { TextureLoader } from 'three';
 
 export const Coin = () => {
   const coinRef = useRef();
+  const texture = useLoader(TextureLoader, myImage);
 
   useFrame(() => {
-    coinRef.current.rotation.y += 0.003;
-    coinRef.current.rotation.x += 0.003;
+    coinRef.current.rotation.y += 0.020;
+    coinRef.current.rotation.x += 0.020;
   });
 
   return (
@@ -34,7 +37,12 @@ export const Coin = () => {
       >
         DG
       </Text>
-      <Text
+
+      <mesh position={[0, -0.06, 0]} rotation={[Math.PI / 2, 0, Math.PI]}>
+        <circleGeometry args={[0.98, 50]} />
+        <meshBasicMaterial map={texture} />
+      </mesh>
+      {/* <Text
         position={[0, -0.06, -0.08]}
         rotation={[Math.PI / 2, 0, Math.PI]}
         fontSize={0.5}
@@ -44,7 +52,7 @@ export const Coin = () => {
         anchorY="middle"
       >
         Dev
-      </Text>
+      </Text> */}
     </group>
 
   );

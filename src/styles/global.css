@@ -12,6 +12,7 @@
 }
 
 body{
+  /* background: linear-gradient(to bottom, rgb(94 234 212), rgb(24, 33, 47), rgb(19, 25, 35), var(--main-bg-color)); */
   background-color: var( --main-bg-color);
   background-image: url('../images/gradient2.svg');
   background-position: right;
@@ -32,25 +33,10 @@ body{
   margin-right: 8px;
 }
 
-.bg-fondo{
-  background-color: var( --main-bg-color);
-  background-image: url('../images/gradient2.svg');
-  background-repeat: no-repeat;
-}
-
-.bg-diff{
-  filter: brightness(1.1);
-  mix-blend-mode: multiply;
-}
-
 .shadow-hover:hover{
   -webkit-box-shadow: 5px 5px 0px 0px var(--ligth-text-color);
   -moz-box-shadow: 5px 5px 0px 0px var(--ligth-text-color);
   box-shadow: 5px 5px 0px 0px var(--ligth-text-color);
-}
-
-.text-light{
-  color: var(--ligth-text-color)  
 }
 
 .fade-in-info {

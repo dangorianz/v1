@@ -12,7 +12,7 @@ export const Logo = () => {
             <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
             <pointLight position={[-10, -10, -10]} />
             <Coin />
-            <OrbitControls enableZoom={false}/>
+            <OrbitControls enableZoom={false} enablePan={false}/>
             <EffectComposer>
             <Bloom luminanceThreshold={0.7} luminanceSmoothing={1} height={300} />
             </EffectComposer>
